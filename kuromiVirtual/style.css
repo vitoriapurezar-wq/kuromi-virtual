@@ -1,0 +1,210 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg, #fce7f3, #eadcff, #f7e8ff);
+    color: #694477;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.quarto {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 22px;
+}
+
+.subtitulo {
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: #a16cb3;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 8px 0;
+    color: #8650a6;
+}
+
+header p:last-child {
+    margin-bottom: 0;
+}
+
+.cartao {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 28px;
+    padding: 22px;
+    box-shadow: 0 12px 35px #9c70b52b;
+}
+
+.status {
+    background: #f7eafa;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.palco {
+    position: relative;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.kuromi-botao {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    animation: flutuar 2.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+.kuromi-botao img {
+    display: block;
+    width: 190px;
+    height: 210px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+.kuromi-botao:hover img {
+    transform: scale(1.06);
+}
+
+.kuromi-botao:active img {
+    transform: scale(0.92);
+}
+
+.decoracao {
+    position: absolute;
+    color: #d18bdb;
+    font-size: 35px;
+}
+
+.decoracao1 {
+    top: 30px;
+    left: 35px;
+}
+
+.decoracao2 {
+    bottom: 25px;
+    right: 35px;
+}
+
+h2 {
+    font-size: 19px;
+    min-height: 48px;
+    margin-bottom: 8px;
+}
+
+.instrucao {
+    color: #a27da9;
+    font-size: 13px;
+}
+
+.carinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff0f8;
+    border-radius: 14px;
+    padding: 13px;
+    margin: 18px 0;
+    font-size: 14px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.botoes button {
+    flex: 1;
+    min-width: 140px;
+    border: none;
+    border-radius: 14px;
+    padding: 13px 10px;
+    background: #b78ad8;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.botoes button:hover {
+    background: #9966c2;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #9c7ba5;
+}
+
+.coracao {
+    position: absolute;
+    bottom: 15px;
+    font-size: 24px;
+    pointer-events: none;
+    animation: subir 1.2s ease-out forwards;
+    z-index: 2;
+}
+
+.dormindo .kuromi-botao {
+    animation: nenhuma;
+    opacity: 0.7;
+}
+
+.dormindo .kuromi-botao img {
+    filter: saturate(0.7);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0) scale(0.7);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-170px) scale(1.4);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .cartao {
+        padding: 16px;
+    }
+}
